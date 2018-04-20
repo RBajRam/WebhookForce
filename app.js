@@ -20,8 +20,17 @@ app.post('/',function(req, res){
     conn.login('r.bajo.ramos@accenture.com','testing1234x7Xg4QsQXWGEfCsC02UeUCSbJ', function(err, res) {
         if (err) { return console.error(err); }
         conn.query(query, function(err, res) {
-          if (err) { return console.error(err); }
-          console.log(res);
+            if (err) { return console.error(err); }
+            var records= res.records
+            
+        console.log(res);
+
+        return res.json({
+            speech: 'Records Found',
+            displayText: dataToSend,
+            payload: records,
+            source: 'WebhookForce'
+            });
         });
     });
 });
