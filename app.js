@@ -26,10 +26,9 @@ app.post('/',function(req, response){
         var a= response.send({
             speech: 'Records Found',
             displayText: 'Records Found',
-            payload: {records: allRecords},
+            payload: {records: allRecords[0]},
             source: 'WebhookForce'
         });
-        console.log(a);
         });
     });
 });
