@@ -22,14 +22,14 @@ app.post('/',function(req, response){
         conn.query(query, function(err, res) {
             if (err) { return console.error(err); }           
             var allRecords= res.records;   
-            console.log(allRecords);     
-        response.send({
+            //console.log(allRecords);     
+        var a= response.send({
             speech: 'Records Found',
             displayText: 'Records Found',
             payload: {records: allRecords},
             source: 'WebhookForce'
         });
-        console.log(response);
+        console.log(a);
         });
     });
 });
