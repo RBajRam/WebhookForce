@@ -1,0 +1,31 @@
+{
+  "name": "webhookforce",
+  "version": "1.0.0",
+  "description": "Dialogflow webhook for Salesforce",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RBajRam/WebhookForce.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "jsforce": "^1.8.4"
+  },
+  "keywords": [
+    "accenture",
+    "webhook",
+    "salesforce",
+    "nodejs",
+    "dialogflow"
+  ],
+  "author": "Accenture",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RBajRam/WebhookForce/issues"
+  },
+  "homepage": "https://github.com/RBajRam/WebhookForce#readme"
+}
