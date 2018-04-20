@@ -26,7 +26,7 @@ app.post('/',function(req, response){
         response.send({
             speech: 'Records Found',
             displayText: 'Records Found',
-            payload:{ records: allRecords},
+            payload: {records: allRecords},
             source: 'WebhookForce'
         });
         console.log(response);
