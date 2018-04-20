@@ -21,7 +21,6 @@ app.post('/',function(req, response){
         if (err) { return console.error(err); }
         conn.query(query, function(err, res) {
             if (err) { return console.error(err); }           
-            
             var records= res.records;   
             console.log(records);     
         response.send({
