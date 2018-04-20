@@ -29,6 +29,7 @@ app.post('/',function(req, response){
             payload:{ records: allRecords},
             source: 'WebhookForce'
         });
+        console.log(response);
         });
     });
 });
