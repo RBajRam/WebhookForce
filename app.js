@@ -17,20 +17,21 @@ app.get('/', function(req, res){
 
 app.post('/',function(req, res){
     var query= req.body.result.fulfillment.speech;
-    conn.login('r.bajo.ramos@accenture.com','testing1234x7Xg4QsQXWGEfCsC02UeUCSbJ', function(err, res) {
+    conn.login('r.bajo.ramos@accenture.com','testing1234x7Xg4QsQXWGEfCsC02UeUCSbJ', function(err, resCon) {
         if (err) { return console.error(err); }
-        conn.query(query, function(err, res) {
+        conn.query(query, function(err, resQ) {
             if (err) { return console.error(err); }
-            var records= res.records
-            
-        console.log(res);
-
+            var records= response.records
         return res.json({
             speech: 'Records Found',
-            displayText: dataToSend,
+            displayText: 'Records Found',
             payload: records,
             source: 'WebhookForce'
-            });
+        });
+
+        console.log(response);
+
+    
         });
     });
 });
