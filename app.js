@@ -22,7 +22,8 @@ app.post('/',function(req, res){
         conn.query(query, function(err, resQ) {
             if (err) { return console.error(err); }
             var records= response.records
-        return res.json({
+            
+        res.send({
             speech: 'Records Found',
             displayText: 'Records Found',
             //payload: records,
