@@ -13,6 +13,9 @@ app.use(bodyParser.json());
 
 app.get('/', function(req, res){
     res.send('Welcome to WebhookForce');
+});
+
+app.post('/',function(req, res){
     conn.login('r.bajo.ramos@accenture.com','testing1234x7Xg4QsQXWGEfCsC02UeUCSbJ', function(err, res) {
         if (err) { return console.error(err); }
         conn.query('SELECT Id, Name FROM Account', function(err, res) {
