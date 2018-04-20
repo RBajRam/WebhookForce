@@ -22,7 +22,7 @@ app.post('/',function(req, response){
         conn.query(query, function(err, res) {
             if (err) { return console.error(err); }           
             var allRecords= res.records;   
-            console.log(records);     
+            console.log(allRecords);     
         response.send({
             speech: 'Records Found',
             displayText: 'Records Found',
