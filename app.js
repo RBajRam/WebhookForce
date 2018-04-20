@@ -21,12 +21,12 @@ app.post('/',function(req, response){
         if (err) { return console.error(err); }
         conn.query(query, function(err, res) {
             if (err) { return console.error(err); }           
-            var records= res.body.records;   
+            var allRecords= res.records;   
             console.log(records);     
         response.send({
             speech: 'Records Found',
             displayText: 'Records Found',
-            payload: records,
+            payload:[{ records: allRecords}],
             source: 'WebhookForce'
         });
         });
