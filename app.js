@@ -21,19 +21,14 @@ app.post('/',function(req, res){
         if (err) { return console.error(err); }
         conn.query(query, function(err, res) {
             if (err) { return console.error(err); }
-            var records= res.body.records;
            
-            console.log(response);        
+            console.log(res);        
         /*res.send({
             speech: 'Records Found',
             displayText: 'Records Found',
             //payload: records,
             source: 'WebhookForce'
         });*/
-
-        
-
-    
         });
     });
 });
