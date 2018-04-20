@@ -21,13 +21,14 @@ app.post('/',function(req, response){
         if (err) { return console.error(err); }
         conn.query(query, function(err, res) {
             if (err) { return console.error(err); }           
-            console.log(res);        
-        /*res.send({
+            console.log(res);
+            var records= res.records;        
+        response.send({
             speech: 'Records Found',
             displayText: 'Records Found',
-            //payload: records,
+            payload: records,
             source: 'WebhookForce'
-        });*/
+        });
         });
     });
 });
