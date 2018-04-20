@@ -15,13 +15,12 @@ app.get('/', function(req, res){
     res.send('Welcome to WebhookForce');
 });
 
-app.post('/',function(req, res){
+app.post('/',function(req, response){
     var query= req.body.result.fulfillment.speech;
     conn.login('r.bajo.ramos@accenture.com','testing1234x7Xg4QsQXWGEfCsC02UeUCSbJ', function(err, res) {
         if (err) { return console.error(err); }
         conn.query(query, function(err, res) {
-            if (err) { return console.error(err); }
-           
+            if (err) { return console.error(err); }           
             console.log(res);        
         /*res.send({
             speech: 'Records Found',
