@@ -21,12 +21,14 @@ app.post('/',function(req, response){
         if (err) { return console.error(err); }
         conn.query(query, function(err, res) {
             if (err) { return console.error(err); }           
-            console.log(res.records);     
+            console.log(res.records);  
+            var records= res.records;   
         
             //TODO Pasar los registros por payload.
             response.send({
             speech: 'Records Found',
             displayText: 'Records Found',
+            data:{ records: records},
             source: 'WebhookForce'
         });
         });
